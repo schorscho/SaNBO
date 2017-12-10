@@ -2,13 +2,13 @@ import os
 from datetime import datetime
 
 
-class Config:
-    PROJECT_ROOT_DIR = "/Users/gopora/MyStuff/Dev/Workspaces/Sandbox/SantanderNBO"
-
-    DATASETS_DIR = os.path.join(PROJECT_ROOT_DIR, "data")
+class SaNBOConfig:
+    ROOT_DIR = "/home/ubuntu"
+    PROJECT_ROOT_DIR = os.path.join(ROOT_DIR, "SaNBO")
+    DATASETS_DIR = os.path.join(ROOT_DIR, "data")
     TF_LOG_DIR = os.path.join(PROJECT_ROOT_DIR, "tf_logs")
-    TRAINING_SET_DATA_FILE = "train_ver2.csv"
-    TEST_SET_DATA_FILE = "test_ver2.csv"
+    TRAINING_SET_DATA_FILE = "sanbo_train_data.csv"
+    TEST_SET_DATA_FILE = "sanbo_test_data.csv"
 
     @staticmethod
     def get_new_tf_log_dir():
